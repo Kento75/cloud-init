@@ -1,0 +1,21 @@
+version: 2
+jobs:
+  test1:
+    working_directory: ~/workspace
+    docker:
+      - image: centos:centos7
+    steps:
+      - checkout
+      - run:
+          name: test cloud-init standard
+          command: bash ./RHEL/standard-setting.sh
+
+  test2:
+    working_directory: ~/workspace
+    docker:
+      - image: centos:centos7
+    steps:
+      - checkout
+      - run:
+          name: test cloud-init docker
+          command: bash ./RHEL/docker-setting.sh
