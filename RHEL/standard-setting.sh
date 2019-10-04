@@ -1,6 +1,6 @@
 #!/bin/sh -ex
 
-$HOST_NAME="standard-setting"
+HOST_NAME="standard-setting"
 
 # timezon
 echo "Set TimeZone"
