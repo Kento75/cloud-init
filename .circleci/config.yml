@@ -1,6 +1,6 @@
 version: 2
 jobs:
-  test1:
+  build:
     working_directory: ~/workspace
     docker:
       - image: centos:centos7
@@ -10,7 +10,7 @@ jobs:
           name: test cloud-init standard
           command: bash ./RHEL/standard-setting.sh
 
-  test2:
+  test:
     working_directory: ~/workspace
     docker:
       - image: centos:centos7
