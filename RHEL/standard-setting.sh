@@ -2,6 +2,8 @@
 
 HOST_NAME="standard-setting"
 
+##### Oracle Linux 7 ↓
+
 # firewall is disable
 echo "Settings firewall is disable"
 sudo systemctl stop firewalld
