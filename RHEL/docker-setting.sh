@@ -45,8 +45,8 @@ sudo yum install -y docker-ce
 
 sudo systemctl start docker
 sudo groupadd docker
-sudo gpasswd -a $USER docker
 sudo usermod -aG docker $USER
+sudo gpasswd -a $USER docker
 sudo systemctl enable docker
 
 # Docker-Compose Install
