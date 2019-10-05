@@ -1,4 +1,4 @@
-#!/bin/sh -ex
+#!/bin/bash
 
 HOST_NAME="standard-setting"
 
