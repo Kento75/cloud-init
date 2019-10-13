@@ -8,7 +8,7 @@ jobs:
       - checkout
       - run:
           name: test cloud-init standard
-          command: bash ./OCI/RHEL/standard-setting.sh
+          command: sudo bash ./OCI/RHEL/standard-setting.sh
 
   test:
     working_directory: ~/workspace
@@ -18,4 +18,4 @@ jobs:
       - checkout
       - run:
           name: test cloud-init docker
-          command: bash ./OCI/RHEL/docker-setting.sh
+          command: sudo bash ./OCI/RHEL/docker-setting.sh
