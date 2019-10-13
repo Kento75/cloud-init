@@ -4,18 +4,20 @@ jobs:
     working_directory: ~/workspace
     docker:
       - image: oraclelinux:7.6
+        user: root
     steps:
       - checkout
       - run:
           name: test cloud-init standard
-          command: sudo bash ./OCI/RHEL/standard-setting.sh
+          command: bash ./OCI/RHEL/standard-setting.sh
 
   test:
     working_directory: ~/workspace
     docker:
       - image: oraclelinux:7.6
+        user: root
     steps:
       - checkout
       - run:
           name: test cloud-init docker
-          command: sudo bash ./OCI/RHEL/docker-setting.sh
+          command: bash ./OCI/RHEL/docker-setting.sh
