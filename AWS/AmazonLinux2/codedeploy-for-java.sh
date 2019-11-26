@@ -30,22 +30,24 @@ sudo systemctl start chrony
 sudo systemctl enable chrony
 
 # java & tomcat setup
-sudo yum install -y erase java-1.7.0-openjdk.x86_64
+sudo yum remove -y java-1.7.0-openjdk.x86_64
 #sudo yum install -y java-8-openjdk
 #sudo yum install -y java-8-openjdk-devel
 sudo yum install -y java-11-amazon-corretto
 # sudo yum install -y java-11-amazon-corretto-headless
-sudo alternatives --config java
 
 # 本当はTomcat9 使いたいけど妥協
 sudo amazon-linux-extras install tomcat8.5
+sudo systemctl enable tomcat
+sudo systemctl start tomcat
 
 # codedeploy agent setup
 # documents -> https://docs.aws.amazon.com/ja_jp/codedeploy/latest/userguide/codedeploy-agent-operations-install-linux.html
 sudo yum install -y ruby
 sudo yum install -y wget
 cd /home/ec2-user
-wget https://bucket-name.s3.region-identifier.amazonaws.com/latest/install
+# 東京リージョン
+wget https://aws-codedeploy-ap-northeast-1.s3.ap-northeast-1.amazonaws.com/latest/install
 chmod +x ./install
 sudo ./install auto
 
