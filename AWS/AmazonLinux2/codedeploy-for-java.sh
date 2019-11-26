@@ -31,8 +31,12 @@ sudo systemctl enable chrony
 
 # java & tomcat setup
 sudo yum install -y erase java-1.7.0-openjdk.x86_64
-sudo yum install -y java-11-openjdk
-sudo yum install -y java-11-openjdk-devel
+#sudo yum install -y java-8-openjdk
+#sudo yum install -y java-8-openjdk-devel
+sudo yum install -y java-11-amazon-corretto
+# sudo yum install -y java-11-amazon-corretto-headless
+sudo alternatives --config java
+
 # 本当はTomcat9 使いたいけど妥協
 sudo amazon-linux-extras install tomcat8.5
 
