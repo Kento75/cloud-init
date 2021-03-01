@@ -30,4 +30,3 @@ sudo systemctl start chrony
 sudo systemctl enable chrony
 
 # end
-
